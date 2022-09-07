@@ -16,7 +16,7 @@ Entre las características de los pescados podemos encontrar lo siguiente:
 
 **Librerias Utiilizadas**
 * __Pandas:__ Para importar y visualizar el dataset
-* __Numpy:__s Para el manejo de arreglos y medidas de estadística
+* __Numpy:__ Para el manejo de arreglos y medidas de estadística
 * __Matplotlib:__ Para poder graficar los resultados obtenidos
 * __Train_test_split de Sklearn:__ Esto nos permite separar datos de entrenamiento y prueba de manera más sencilla
 
