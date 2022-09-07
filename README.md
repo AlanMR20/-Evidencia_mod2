@@ -1,5 +1,7 @@
 # Evidencia 1, Módulo 2: Análisis y Reporte sobre el desempeño del modelo
 
+El script utilizado para esta evidencia se llama __Evi1_pt2.py__, el cual es el único archivo que se encuentra en el repositorio.
+
 ## Fish Market Dataset
 Para esta evidencia se utilizó un dataset de Kaggle el cual nos proporciona información acerca de 7 especies de peces que se comercializan. El fin de este dataset es poder realizar un modelo de machine learning que pueda predecir con base a sus características un cierto peso y con este posteriormente poder asignarle un cierto peso arbitrario para comercializarlos.
 
@@ -12,7 +14,13 @@ Entre las características de los pescados podemos encontrar lo siguiente:
 * __Height:__ Altura del pez (cm)
 * __Width:__ Anchura diagonal del pez (cm)
 
-## Análisis precio de los datos
+**Librerias Utiilizadas**
+* Pandas: Para importar y visualizar el dataset
+* Numpy: Para el manejo de arreglos y medidas de estadística
+* Matplotlib: Para poder graficar los resultados obtenidos
+* Train_test_split de Sklearn: Esto nos permite separar datos de entrenamiento y prueba de manera más sencilla
+
+## Análisis previo de los datos
 Antes de escoger un modelo de regresión para hacer nuestras predicciones, primero debemos de conocer cuál es la relación de los datos. Para ello podemos ver la matriz de correlaciones de nuestros datos para ver si existe linealidad entre dos o más variables, teniendo lo siguiente:
 
 ![image](https://user-images.githubusercontent.com/101605777/188798206-84b3f85b-fcba-480b-b4c3-cf1dfa1d974b.png)
@@ -24,7 +32,11 @@ Para nuestro conjunto de datos tenemos que las longitudes 1,2 y 3 están fuertem
 
 $h_\theta=\theta+\theta_1x_1+\theta_2x_2$
 
-## Resultados y Predicciones
+## Métricas de desempeño (valor logrado sobre el subset de prueba)
+
+## Predicciones de prueba (entradas, valor esperado, valor obtenido)
 
 ![image](https://user-images.githubusercontent.com/101605777/188798597-7575f2a8-3617-476d-8eb7-7fb6541493bf.png)
 
+
+## Conclusión
