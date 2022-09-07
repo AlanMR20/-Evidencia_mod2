@@ -15,10 +15,10 @@ Entre las características de los pescados podemos encontrar lo siguiente:
 * __Width:__ Anchura diagonal del pez (cm)
 
 **Librerias Utiilizadas**
-* Pandas: Para importar y visualizar el dataset
-* Numpy: Para el manejo de arreglos y medidas de estadística
-* Matplotlib: Para poder graficar los resultados obtenidos
-* Train_test_split de Sklearn: Esto nos permite separar datos de entrenamiento y prueba de manera más sencilla
+* __Pandas:__ Para importar y visualizar el dataset
+* __Numpy:__s Para el manejo de arreglos y medidas de estadística
+* __Matplotlib:__ Para poder graficar los resultados obtenidos
+* __Train_test_split de Sklearn:__ Esto nos permite separar datos de entrenamiento y prueba de manera más sencilla
 
 ## Análisis previo de los datos
 Antes de escoger un modelo de regresión para hacer nuestras predicciones, primero debemos de conocer cuál es la relación de los datos. Para ello podemos ver la matriz de correlaciones de nuestros datos para ver si existe linealidad entre dos o más variables, teniendo lo siguiente:
