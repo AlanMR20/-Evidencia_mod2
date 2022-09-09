@@ -14,7 +14,7 @@ Entre las características de los pescados podemos encontrar lo siguiente:
 * __Height:__ Altura del pez (cm)
 * __Width:__ Anchura diagonal del pez (cm)
 
-**Librerias Utiilizadas**
+**Librerias Utilizadas**
 * __Pandas:__ Para importar y visualizar el dataset
 * __Numpy:__ Para el manejo de arreglos y medidas de estadística
 * __Matplotlib:__ Para poder graficar los resultados obtenidos
