@@ -32,7 +32,7 @@ Lo que podemos ver en la imagen anterior es un resumen del modelo generado en R.
 
 Sustituyendo los coeficientes y nuestras variables tenemos lo siguiente: $F_{weight}=71.1874-53.4969F_{width}-6.7464L+5.3301F_{width}L$
 
-### Implementación del modelo con Python
+### Python
 Gracias a esta nueva característica que creamos a partir de una relación entre las longitudes, podemos utilizar esta información para implementarla en python con sklearn y probar con diferentes modelos de regresión con diferentes características para saber cuáles de esas características son más relevantes para poder hacer nuestra estimación del peso de los peces. Por lo que vamos a probar 4 modelos de distintas características y comparar sus desempeños y para ello necesitamos usar las siguientes librerías.
 
 **Librerías Utilizadas**
@@ -56,7 +56,7 @@ Al agregar estas nuevas columnas quiere decir que vamos a tener más interaccion
 ### Implementación de diferentes modelos
 Para poder comparar que se use el modelo con las características óptimas para poder predecir nuestra y que es el peso del pez, se probarán __6 modelos__ donde cada uno posee distintas características. Además se creó un arreglo donde contiene todos las __X__ y este arreglo se mete en una función donde se evalúa cada modelo para ver el rendimiento y poder decir cual es es la mejor opción para predecir el peso del pez.
 
-![image](https://user-images.githubusercontent.com/101605777/189424803-d12a7fd5-4ab4-48ea-8149-64013a90cd20.png)
+![image](https://user-images.githubusercontent.com/101605777/189437698-86723801-a4cb-477c-a7cb-e21f3cd52d53.png)
 
 Se creó una función donde se crea el modelo de regresión lineal múltiple y se evalúa su rendimiento dependiendo de los conjuntos de entrenamiento y prueba y de las características de $X_n$.
 
@@ -74,10 +74,11 @@ Para evaluar el desempeño de cada modelo usamos dos métricas estadísticas par
 
 Se usaron de manera aleatoria __5__ números que son un hiperparámetro del modelo de regresión lineal de Sklearn para que se escogieron de manera aleatoria distintas muestras para los conjuntos de prueba y entrenamiento y estas muestras aleatorias se evaluaron en los 6 diferentes modelos creados, donde los resultados fueron los siguientes:
 
-![image](https://user-images.githubusercontent.com/101605777/189426763-2dee53b5-ca21-409c-9b22-dafd30f261ff.png)
 
+
+Podemos ver que para l
 
 El script de Python se encuentra de igual manera en la carperta de __Codes__ con el nombre de **Evi1_pt2.py**.
 
-## Conclusión
-Se mamó xd
+## Conclusiones
+XD
