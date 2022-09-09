@@ -1,6 +1,6 @@
 # Evidencia 1, Módulo 2: Uso de framework o biblioteca de aprendizaje máquina para la implementación de una solución
 
-__NOTA:__Los script utilizados para esta evidencia se encuetran en la carpeta de __Codes__.
+__NOTA:__ Los script utilizados para esta evidencia se encuetran en la carpeta de __Codes__.
 
 ## Fish Market Dataset
 Para esta evidencia se utilizó un dataset de Kaggle el cual nos proporciona información acerca de 7 especies de peces que se comercializan. El fin de este dataset es poder realizar un modelo de machine learning que pueda predecir con base a sus características un cierto peso y con este posteriormente poder asignarle un cierto peso arbitrario para comercializarlos.
@@ -33,12 +33,21 @@ Lo que podemos ver en la imagen anterior es un resumen del modelo generado en R.
 Sustituyendo los coeficientes y nuestras variables tenemos lo siguiente: $F_{weight}=71.1874-53.4969F_{width}-6.7464L+5.3301F_{width}L$
 
 ### Implementación del modelo con Python
+Gracias a esta nueva característica que creamos a partir de una relación entre las longitudes, podemos utilizar esta información para implementarla en python con sklearn y probar con diferentes modelos de regresión con diferentes características para saber cuáles de esas características son más relevantes para poder hacer nuestra estimación del peso de los peces. Por lo que vamos a probar 4 modelos de distintas características y comparar sus desempeños y para ello necesitamos usar las siguientes librerías.
 
-**Librerias Utilizadas**
+**Librerías Utilizadas**
 * __Pandas:__ Para importar y visualizar el dataset
-* __Numpy:__ Para el manejo de arreglos y medidas de estadística
 * __Matplotlib:__ Para poder graficar los resultados obtenidos
-* __Train_test_split de Sklearn:__ Esto nos permite separar datos de entrenamiento y prueba de manera más sencilla
+* __Sklearn:__ Librería para el uso de herramientas de Machine Learning, pero solo usaremos las siguientes:
+    * __Train_test_split:__ Nos permite separar datos de entrenamiento y prueba de manera más sencilla
+    * __Linear_model:__ Para usar el modelo ya implementado  de regresión lineal
+    * __Metrics:__  Para usar métricas estadísticas que nos ayuden a evaluar el desempeño de los modelos
+
+
+![image](https://user-images.githubusercontent.com/101605777/189273261-04f96749-26a9-430b-8ef2-2125b3c023bd.png)
+
+![image](https://user-images.githubusercontent.com/101605777/189273345-f475a467-29e6-48af-b7bf-5685bbafcd87.png)
+
 
 ## Métricas de desempeño (valor logrado sobre el subset de prueba)
 
