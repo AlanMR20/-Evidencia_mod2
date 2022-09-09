@@ -1,4 +1,4 @@
-# Evidencia 1, Módulo 2: Análisis y Reporte sobre el desempeño del modelo
+# Evidencia 1, Módulo 2: Uso de framework o biblioteca de aprendizaje máquina para la implementación de una solución
 
 El script utilizado para esta evidencia se llama __Evi1_pt2.py__, el cual es el único archivo que se encuentra en el repositorio.
 
