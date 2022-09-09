@@ -67,7 +67,7 @@ Se creó una función donde se crea el modelo de regresión lineal múltiple y s
 ### Métricas de desempeño
 Para evaluar el desempeño de cada modelo usamos dos métricas estadísticas para evaluar que tan bien se ajustó el conjunto de entrenamiento para hacer las predicciones con el conjunto de prueba.
 * __Coeficiente de determinación ( $r^2$ ):__ Nos indica que que tan bien se ajustan los datos con nuestro modelo mediante los residuos entre los valores reales y los estimados
-* __Error cuadrático medio (ECM):___ Es la la suma de la varianza y el cuadrado sesgo de las predicciones
+* __Error cuadrático medio (ECM):__ Es la la suma de la varianza y el cuadrado sesgo de las predicciones
 
 ## Predicciones de prueba
 * **Entradas**: Conjuntos de entrenamiento  y prueba para nuestros modelos 
