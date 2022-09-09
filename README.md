@@ -25,7 +25,7 @@ Gracias a esta matriz de correlaciones podemos darnos cuenta de que todas las lo
 Para nuestro conjunto de datos tenemos que las longitudes 1,2 y 3 están fuertemente relacionadas con el peso pero sobre todo entre sí, por lo que haremos una nueva característica donde se incluyan las tres longitudes de tal manera que siga siendo útil para nuestro modelo y sobre todo reducir el número de dimensiones. Lo que haremos será multiplicar las 3 longitudes y sacarle la raíz cúbica a dicha operación para no tener un valor tan grande para los coeficientes del modelo. Esta nueva característica será la primera de nuestro modelo. Mientras que la anchura diagonal por sí sola será nuestra segunda característica y con buscaremos un modelo de regresión lineal de segundo orden que se pueda ajustar a nuestras características para encontrar un modelo para predecir el peso de los peces. Por lo que buscaremos que nuestro modelo se ajuste a estas dos características.
 
 ### RStudio
-En modulo de estadística utilizamos la herramienta de RStudio, la cual tiene una sintaxis muy simple al igual que python con la diferencia que R es más especializada para trabajar con herramientas estadísticas. Por lo que para analizar cómo sería nuestro modelo de regresión lineal tomando en cuenta la anchura y nuestra característica creada de las longitudes como variables independientes una de la otra es decir $\theta_1$ y $\theta_2$, así como la interacción de ambas características, lo cual nos ayuda para ver que tan significante es tomar en cuenta la interacción entres estas. El script de R se encuentra de igual manera en la carpeta __Codes__ con el normbre de **Fish_test.Rmd**.
+En modulo de estadística utilizamos la herramienta de RStudio, la cual tiene una sintaxis muy simple al igual que python con la diferencia que R es más especializada para trabajar con herramientas estadísticas. Por lo que para analizar cómo sería nuestro modelo de regresión lineal tomando en cuenta la anchura y nuestra característica creada de las longitudes como variables independientes una de la otra es decir $\theta_1$ y $\theta_2$, así como la interacción de ambas características, lo cual nos ayuda para ver que tan significante es tomar en cuenta la interacción entres estas. El script de R se encuentra dentro de la carpeta __Codes__ con el normbre de **Fish_test.Rmd**.
 ![image](https://user-images.githubusercontent.com/101605777/189255881-66731729-5bba-47f3-a34d-662dcadb069e.png)
 
 Lo que podemos ver en la imagen anterior es un resumen del modelo generado en R. La parte de coeficientes es la que más nos interesa analizar ya que en la columna de __Estimate__ tenemos los valores de $\theta$, $\theta_1$, $\theta_2$ y $\theta_3$ ; donde $\theta_3$ corresponde a la interacción de $x_1$ y $x_2$. Sabemos que esta interacción es significativa ya que tenemos un valor t mucho mayor de 0 que nos indica que la interación es significativa para hallar nuestra $H_0$ por lo que nuestro modelo quedaría de la siguiente manera: $h_\theta=\theta+\theta_1x_1+\theta_2x_2+\theta_3x_1x_2$.
@@ -43,17 +43,39 @@ Gracias a esta nueva característica que creamos a partir de una relación entre
     * __Linear_model:__ Para usar el modelo ya implementado  de regresión lineal
     * __Metrics:__  Para usar métricas estadísticas que nos ayuden a evaluar el desempeño de los modelos
 
+**Añadimos las nuevas caracteristicas al modelo**
+ * __L123:__ Contiene la raíz cúbica del producto de las longitudes 1,2 y 3
+ * __WidthXL123:__ La interacción entre Anchura la nuestra nueva característica
 
 ![image](https://user-images.githubusercontent.com/101605777/189273261-04f96749-26a9-430b-8ef2-2125b3c023bd.png)
 
+Al agregar estas nuevas columnas quiere decir que vamos a tener más interacciones por lo que hay que checar la matriz de correlación con estos cambios y ver qué tan relevantes pueden ser para nuestro modelo lineal.
+
 ![image](https://user-images.githubusercontent.com/101605777/189273345-f475a467-29e6-48af-b7bf-5685bbafcd87.png)
 
+**Selección de las mejores características**
+
+Para poder comparar que se use el modelo con las características óptimas para poder predecir nuestra y que es el peso del pez, se probarán __6 modelos__ donde cada uno posee distintas características, los cuales son los siguientes:
+![image](https://user-images.githubusercontent.com/101605777/189287450-028522b5-8bb0-42e4-9a09-0b037659c25c.png)
+
+**Implementación  de los diferentes modelos** 
+
+Se creó un arreglo donde contiene todos las __X__ y este arreglo se mete en una función donde se evalúa cada modelo para ver el rendimiento y poder decir cual es es la mejor opción.
+
+![image](https://user-images.githubusercontent.com/101605777/189292945-b8677a48-5e9b-415c-b5e4-52060edecfae.png)
+![image](https://user-images.githubusercontent.com/101605777/189293126-b2240187-dbef-4658-a7cf-ca6b4c40cc58.png)
 
 ## Métricas de desempeño (valor logrado sobre el subset de prueba)
+Para evaluar el desempeño de cada modelo usamos dos métricas estadísticas:
+* __Coeficiente de correlación ( $r^2$ ):__ Nos indica que que tan bien se ajustan los datos con nuestro modelo mediante los residuos entre los valores reales y los estimados
+* __Error cuadrático medio (ECM):___ Es la la suma de la varianza y el cuadrado sesgo de las predicciones
+![image](https://user-images.githubusercontent.com/101605777/189287498-4354c6cf-94d5-49ea-8629-beab7ea00c41.png)
 
 ## Predicciones de prueba (entradas, valor esperado, valor obtenido)
 
 ![image](https://user-images.githubusercontent.com/101605777/188798597-7575f2a8-3617-476d-8eb7-7fb6541493bf.png)
 
+El script de Python se encuentra de igual manera en la carperta de __Codes__ con el nombre de **Evi1_pt2.py**.
 
 ## Conclusión
+Se mamó xd
