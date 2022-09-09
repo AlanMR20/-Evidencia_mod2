@@ -53,27 +53,29 @@ Al agregar estas nuevas columnas quiere decir que vamos a tener más interaccion
 
 ![image](https://user-images.githubusercontent.com/101605777/189273345-f475a467-29e6-48af-b7bf-5685bbafcd87.png)
 
-**Selección de las mejores características**
+### Implementación de diferentes modelos
+Para poder comparar que se use el modelo con las características óptimas para poder predecir nuestra y que es el peso del pez, se probarán __6 modelos__ donde cada uno posee distintas características. Además se creó un arreglo donde contiene todos las __X__ y este arreglo se mete en una función donde se evalúa cada modelo para ver el rendimiento y poder decir cual es es la mejor opción para predecir el peso del pez.
 
-Para poder comparar que se use el modelo con las características óptimas para poder predecir nuestra y que es el peso del pez, se probarán __6 modelos__ donde cada uno posee distintas características, los cuales son los siguientes:
-![image](https://user-images.githubusercontent.com/101605777/189287450-028522b5-8bb0-42e4-9a09-0b037659c25c.png)
+![image](https://user-images.githubusercontent.com/101605777/189424803-d12a7fd5-4ab4-48ea-8149-64013a90cd20.png)
 
-**Implementación  de los diferentes modelos** 
+Se creó una función donde se crea el modelo de regresión lineal múltiple y se evalúa su rendimiento dependiendo de los conjuntos de entrenamiento y prueba y de las características de $X_n$.
 
-Se creó un arreglo donde contiene todos las __X__ y este arreglo se mete en una función donde se evalúa cada modelo para ver el rendimiento y poder decir cual es es la mejor opción.
+![image](https://user-images.githubusercontent.com/101605777/189431358-93899cfa-b6b2-400e-943e-be0a1f929c14.png)
 
-![image](https://user-images.githubusercontent.com/101605777/189292945-b8677a48-5e9b-415c-b5e4-52060edecfae.png)
-![image](https://user-images.githubusercontent.com/101605777/189293126-b2240187-dbef-4658-a7cf-ca6b4c40cc58.png)
-
-## Métricas de desempeño (valor logrado sobre el subset de prueba)
-Para evaluar el desempeño de cada modelo usamos dos métricas estadísticas:
+### Métricas de desempeño
+Para evaluar el desempeño de cada modelo usamos dos métricas estadísticas para evaluar que tan bien se ajustó el conjunto de entrenamiento para hacer las predicciones con el conjunto de prueba.
 * __Coeficiente de correlación ( $r^2$ ):__ Nos indica que que tan bien se ajustan los datos con nuestro modelo mediante los residuos entre los valores reales y los estimados
 * __Error cuadrático medio (ECM):___ Es la la suma de la varianza y el cuadrado sesgo de las predicciones
-![image](https://user-images.githubusercontent.com/101605777/189287498-4354c6cf-94d5-49ea-8629-beab7ea00c41.png)
 
-## Predicciones de prueba (entradas, valor esperado, valor obtenido)
+## Predicciones de prueba
+* **Entradas**: Conjuntos de entrenamiento  y prueba para nuestros modelos 
+* **Valor esperado:** Valores de los pesos de los peces reales de nuestro dataset
+* **Valor obtenido:**  Valores de los pesos de los peces predecidos por los modelos
 
-![image](https://user-images.githubusercontent.com/101605777/188798597-7575f2a8-3617-476d-8eb7-7fb6541493bf.png)
+Se usaron de manera aleatoria __5__ números que son un hiperparámetro del modelo de regresión lineal de Sklearn para que se escogieron de manera aleatoria distintas muestras para los conjuntos de prueba y entrenamiento y estas muestras aleatorias se evaluaron en los 6 diferentes modelos creados, donde los resultados fueron los siguientes:
+
+![image](https://user-images.githubusercontent.com/101605777/189426763-2dee53b5-ca21-409c-9b22-dafd30f261ff.png)
+
 
 El script de Python se encuentra de igual manera en la carperta de __Codes__ con el nombre de **Evi1_pt2.py**.
 
