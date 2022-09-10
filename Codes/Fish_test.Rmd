@@ -1,0 +1,40 @@
+---
+title: "Fish Data set"
+author: "Me"
+date: "2022-09-07"
+output: html_document
+---
+
+```{r}
+Fs=read.csv("Fish.csv") #leer la base de datos
+head(Fs)
+cor(Fs[1:159,2:7])
+```
+## Añadimos nuestra nueva caracteristica y asignamos X y Y para nuestro modelo
+```{r}
+lengths = Fs$Length1 * Fs$Length2 * Fs$Length3
+L3 = 10^(log10(lengths)/3)
+y = Fs$Weight
+cat(" Y -> Weight\nX1 -> Width\nX2 -> L3\n")
+```
+
+## Ajuste del modelo de regresión lineal
+```{r}
+plot(y ~ Fs$Width*L3, col="black", main="Plot")
+y_hat <- lm(y ~ Fs$Width*L3)
+summary(y_hat)
+```
+# Análisis de residuos
+```{r}
+plot(y_hat, col="green")
+```
+
+## El coeficiente de determinación del modelo 
+```{r}
+y_hat <- predict(y_hat)
+res = y - y_hat
+r1 = res^2
+r2 = (y-mean(y))^2
+rr = 1-(sum(r1)/sum(r2))
+cat(" R^2:",rr,"\n")
+```
